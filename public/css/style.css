@@ -1,0 +1,301 @@
+:root{
+  --moradoNw: #1c1a53;
+}
+h2{
+  font-size: 1.5rem;
+}
+strong{
+  font-weight: bold;
+}
+html,
+body,
+.view {
+  height: 100%; }
+
+/* Full Page Carousel itself*/
+.carousel {
+  height: 100%; }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item,
+    .carousel .carousel-inner .active {
+      height: 100%; }
+img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar animation */
+.navbar {
+  background-color: rgba(26, 28, 83, 0.4); }
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background: var(--moradoNw) !important;
+   }
+}
+.top-nav-collapse {
+  background-color: var(--moradoNw); }
+
+/* Adding color to the Navbar on mobile */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: var(--moradoNw); } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: var(--moradoNw); 
+}
+/*Boton slider*/
+.btn-outline-primary{
+  border: solid #FFF 2px;
+}
+.btn-style {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-style:hover{
+  color: #FFF;
+}
+.btn-style::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.281);
+  transition: all 0.3s;
+}
+.btn-style:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-style::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid #ffffff;
+  transform: scale(1.2,1.2);
+}
+.btn-style:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+/*.carousel*/
+li[data-target="#carousel-example-1z"]{
+  box-sizing: content-box;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: #FFF;
+  background-clip: padding-box;
+  opacity: .5;
+  transition: opacity .6s ease;
+}
+li[class^="active"]{
+  opacity: .0;
+}
+/* Mapa */
+#map{
+  width: 100%;
+  height: 350px;
+  margin: auto
+}
+/*carousel*/
+.card{border-radius: 10px;}
+
+.card-body,.card-body:hover{
+  border-radius: 0 0 10px 10px;
+  box-shadow: none;
+}
+.card img{
+  border-radius: 10px 10px 0px 0px;
+}
+
+.btn-carousel-previous,.btn-carousel-next{
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  height: 270px;
+  border: none;
+  opacity: 50%;
+  transition: .2s;
+}
+.btn-carousel-previous:hover,.btn-carousel-next:hover{
+  opacity: 100%;
+}
+
+@media (max-width: 1200px){
+  .btn-carousel-previous,.btn-carousel-next{
+    height: 230px;
+  }
+}
+@media (max-width: 991px){
+  .btn-carousel-previous,.btn-carousel-next{
+    height: 200px;
+    width: 30px;
+  }
+}
+@media (max-width: 767px){
+  .btn-carousel-previous,.btn-carousel-next{
+    height: 270px;
+    width: 30px;
+  }
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carousel__list::-webkit-scrollbar {
+  display: none;
+}
+.carousel__list{
+  overflow: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;   /* Firefox */
+}
+.carousel__element{
+  max-width:250px
+}
+.carousel__indicator .glider-dot{
+  margin: 2px;
+  width: 30px;
+  height: 10px;
+}
+.carousel__indicator .active{
+  background-color: rgb(0, 38, 206);
+}
+/* Banner */
+.span{
+  height: 260px;
+  overflow: hidden;
+}
+.background{
+  background-image: url(../img/codigo2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(3px);
+  position: absolute;
+  width: 100%;
+  height: 260px;
+}
+/* Blog */
+.card-left img{
+  border-radius: 0rem!important;
+  border-bottom-left-radius: 10px!important;
+  border-top-left-radius: 10px!important;
+}
+.card-right img{
+  border-radius: 0rem!important;
+  border-bottom-right-radius: 10px!important;
+  border-top-right-radius: 10px!important;
+}
+
+/* Servicios */
+.d-grid{
+  grid-gap:8px;
+}
+.round{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  box-shadow: 0 0 0 7px var(--moradoNw);
+}
+.logo-sistemas-administrativos{
+  height:150px;width:auto;
+  margin-top:1rem;
+}
+.logo-mt-50{
+  margin-top: -50px;
+}
+
+.fa-check{color: green;}
+.fa-times{color: red;}
+/* Tarjeta servicio laterales*/
+.card-sides-servicio{
+  background-color:#F2F2F2;
+  transition: box-shadow .3s, transform .3s;
+  margin-top: 4rem!important;
+  font-size: 18px;
+  height: 43.5rem;
+  width: 295px;
+}
+.content-sides-features{
+  height: 24rem;
+}
+@media(max-width:1680px){
+  .card-sides-servicio{
+    font-size: 14.5px;
+    height: 34.5rem;
+    width: 240px;
+  }
+  .content-sides-features{
+    height: 21rem;
+  }
+  .d-grid{
+    grid-gap: 0px;
+  }
+  .round{
+    width: 90px;
+    height: 90px;
+  }
+  .content-sides-features > p > span{
+    font-size: 14px!important;
+  }
+  .precio{
+    font-size: 2rem!important;
+  }
+}
+@media(max-width:1390px){
+  .card-sides-servicio{
+    font-size: 11.6px;
+    height: 31.5rem;
+    width: 210px;
+  }
+  .content-sides-features{
+    height: 18rem;
+  }
+  .fa-times{
+    font-size: 20px!important;
+  }
+}
+@media(max-width:1250px){
+  .card-sides-servicio{
+    font-size: 18px;
+    height: 38rem;
+    width: 295px;
+  }
+  .content-sides-features{
+    height: 24rem;
+  }
+  .content-sides-features > p > span{
+    font-size: 20px!important;
+  }
+}
+/* Tarjeta servicio central*/
+.card-center-servicio{
+  background-color:#F2F2F2;
+  border:solid #4285f4 2px;
+  transition: box-shadow .3s, transform .3s;
+  height: 47.5rem;
+}
+.content-center-features{
+  font-size: 22px;
+}
+/* Hover */
+.card-sides-servicio:hover,
+.card-center-servicio:hover{
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.281)!important;
+  transform: scale(1.05);
+}
